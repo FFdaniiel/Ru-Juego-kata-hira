@@ -1,0 +1,105 @@
+:root {
+    --first-background: #ECB390;
+    --second-background: #D4E2D4;
+    --font-color-primary: #FCF8E8;
+    --color-comp: #DF7861;
+}
+body{
+    margin: 1rem;
+    background-color: var(--second-background);
+}
+/* Extras */
+button{
+    display: block;
+    padding: .7rem;
+    margin: .5rem;
+    border: none;
+    border-radius: 0 1.5rem 0 1.5rem;
+    font-size: 1.1rem;
+    color: var(--font-color-primary);
+    cursor: pointer;
+
+}
+textarea{
+    border: none;
+    resize: none;
+    box-shadow: none;
+    outline: none;;
+}
+
+/* Contenido principal - fondo/logo - header - nav*/
+.container{
+    background-color: var(--first-background);
+    width: 100%;
+    height: 100%;
+}
+.header__logo{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: -3rem;
+    color: var(--second-background);
+    font-size: 15rem;
+    line-height: 1;
+
+}
+.header__navGuia{
+    position: absolute;
+    right: 0rem;
+    top: -1rem;
+    border-radius: 100%;
+    background-color: var(--second-background);
+    padding: 3rem;
+    color: var(--color-comp);
+    cursor: pointer;
+}
+.header__button{
+    padding: .5rem;
+}
+
+#hira{
+    background-color: var(--color-comp);
+}
+#kata{
+    background: var(--first-background);
+    border: .1rem solid var(--color-comp);
+}
+
+/*  MAIN / JUEGO */
+
+.main__container{
+    display: grid;
+}
+.main__contador{
+    margin: .5rem;
+}
+.main__silabaRandom{
+    grid-row: 2;
+    text-align: center;
+    font-size: 12rem;
+    color: var(--font-color-primary);
+}
+.main__container textarea{
+    justify-self: center;
+    background-color: var(--color-comp);
+    border-radius: 2rem;
+    height: 40px;
+    color: var(--font-color-primary);
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 40px;
+    margin-bottom: 3rem;
+}
+.main__container textarea::placeholder{
+    color: var(--font-color-primary);
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 40px;
+}
+
+.main__container textarea:focus{
+    background: var(--second-background);
+    color: var(--color-comp);
+}
+.main__container textarea:focus::placeholder{
+    color: var(--color-comp);
+}
