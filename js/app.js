@@ -19,7 +19,7 @@ function InicioLetrahi (){
 // Verifica si el texto colocado es igual que el simbolo 
 
 function verificarRespuesta(){
-    respuestaTexto.addEventListener ("click", () => {
+    respuestaTexto.addEventListener ("keydown", () => {
         let textAreaDeRespuesta = document.querySelector('#respuesta').value;
         if (respuestaCorrecta == textAreaDeRespuesta) {
             respuestaTexto.value = '';
@@ -35,10 +35,10 @@ function verificarRespuesta(){
 }
 // Cancelar el salto entre linea de texto / es decir cancela enter
 function cancelar() {
-    if (e.keyCode === 13 && !e.shiftKey) {
-        e.preventDefault();
-        var boton = document.getElementById("boton");
-        angular.element(boton).triggerHandler('click');
+    var key = event.keyCode;
+
+    if (key === 13) {
+        event.preventDefault();
     }
 }
 
