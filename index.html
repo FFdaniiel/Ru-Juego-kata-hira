@@ -23,7 +23,8 @@
             <div class="main__container">
                 <p><span class="main__contador" id="aciertos">0</span> / <span id="cantidad">0</span></p>
                 <span id="silabaRandom" class="main__silabaRandom">あ</span>
-                <textarea id="respuesta" rows="2" placeholder="Ingrese el texto"></textarea>
+                    <textarea  id="respuesta" onkeypress="cancelar()" maxlength="3" placeholder="Ingrese el texto"></textarea>
+                    <button id="btnEnviar" class="btnEnviar">Hiragana</button>
             </div>
         </main>
         <footer>
@@ -31,7 +32,7 @@
 
         </footer>
     </div>
-    <script src="./js/app.js"></script>
     <script src="./js/silabas.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 </html>
