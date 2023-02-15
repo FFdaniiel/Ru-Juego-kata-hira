@@ -1,5 +1,6 @@
 ﻿# Ru-Juego-kata-hira
 (No terminado) - (Probablemente al terminar se vuelva a ver el diseño)
+
 Practica de conceptos e intentar hacer un proyecto propio.
 La idea es lograr un juego de responder cual es la palabra tanto en katakana como hiragana
 
