@@ -79,7 +79,7 @@ textarea{
     color: var(--font-color-primary);
 }
 .btnEnviar{
-    background: red;
+    display: none;
 }
 .main__container textarea{
     justify-self: center;
