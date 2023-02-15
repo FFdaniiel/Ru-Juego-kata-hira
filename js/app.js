@@ -32,11 +32,12 @@ function verificarRespuesta(){
     InicioLetrahi ()
     btnEnviarDato.addEventListener ("click", () => {
         let textAreaDeRespuesta = document.querySelector('#respuesta').value;
-        if (respuestaCorrecta == textAreaDeRespuesta) {
+        if (respuestaCorrecta == textAreaDeRespuesta.toLocaleLowerCase()) {
             contadorAciertos++
-        }else if(respuestaCorrecta != textAreaDeRespuesta){
-            contadortotal++
+        }else if(respuestaCorrecta != textAreaDeRespuesta ){
+            
         }
+        contadortotal++
         InicioLetrahi ()
         console.log(textAreaDeRespuesta)
         console.log(`${respuestaCorrecta} - contador: ${contadortotal} - contadorAciertos ${contadorAciertos} `);

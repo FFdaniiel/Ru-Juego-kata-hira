@@ -1,4 +1,8 @@
 :root {
+    /* tipografia */
+    --tipo-jp: 'Noto Sans JP', sans-serif;
+    --tipo-rubik: 'Rubik', sans-serif;
+    /* Colores */
     --first-background: #ECB390;
     --second-background: #D4E2D4;
     --font-color-primary: #FCF8E8;
@@ -7,8 +11,10 @@
 body{
     margin: 1rem;
     background-color: var(--second-background);
+    font-family: var(--tipo-rubik);
 }
 /* Extras */
+
 button{
     display: block;
     padding: .7rem;
@@ -77,6 +83,13 @@ textarea{
     text-align: center;
     font-size: 12rem;
     color: var(--font-color-primary);
+    font-family: var(--tipo-jp);
+}
+.main p{
+    color: var(--font-color-primary);
+    font-size: 1.6rem;
+    text-align: center;
+    font-family: var(--tipo-jp);
 }
 .btnEnviar{
     display: none;
