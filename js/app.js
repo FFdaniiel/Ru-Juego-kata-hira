@@ -78,7 +78,7 @@ function verificarRespuesta(simbolo){
             contadortotal++
         }
         // console.log(textAreaDeRespuesta)
-        // console.log(`${respuestaCorrecta} - contador: ${contadortotal} - contadorAciertos ${contadorAciertos} `);
+        console.log(`${respuestaCorrecta} - contador: ${contadortotal} - contadorAciertos ${contadorAciertos} `);
     });
 }
 
@@ -106,6 +106,7 @@ btnKatakana.addEventListener('click', () => {
     verificarRespuesta(katakana)
 
 });
+
 btnHiragana.addEventListener('click', () => {
     btnHiragana.classList.remove('off');
     btnKatakana.classList.remove('on');
@@ -114,11 +115,9 @@ btnHiragana.addEventListener('click', () => {
     contadorCero()
     InicioLetrahi(hiragana)
     verificarRespuesta(hiragana)
-
 });
-verificarRespuesta(hiragana)
 
 
-// verificarRespuesta(hiragana)
+    
 // console.log(btnHiragana)
 // console.log(btnKatakana)   

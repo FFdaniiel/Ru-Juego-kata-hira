@@ -82,12 +82,16 @@ textarea{
 .main__contador{
     margin: .5rem;
 }
+
 .main__silabaRandom{
     grid-row: 2;
     text-align: center;
     font-size: 12rem;
     color: var(--font-color-primary);
     font-family: var(--tipo-jp);
+}
+.extra{
+    color: var(--color-comp);
 }
 .main p{
     color: var(--font-color-primary);
