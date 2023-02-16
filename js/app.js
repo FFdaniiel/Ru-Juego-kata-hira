@@ -25,24 +25,24 @@ function contadorCero(){
     contadorAciertos = 0
 }
 // Se crea  una constante para generar una aleatoridad en el array de silabas
-function InicioLetrahi (){
+function InicioLetrahi (simbolo){
     silabaActual = []
     respuestaCorrecta = []
     verificarAcierto()
-    const posicionAleatoria = Math.floor(Math.random()*hiragana.length);
+    const posicionAleatoria = Math.floor(Math.random()*simbolo.length);
     respuestaCorrecta = hiraRoma[posicionAleatoria];
-    silabaActual = hiragana[posicionAleatoria];
+    silabaActual = simbolo[posicionAleatoria];
     silabaRandom.innerHTML = silabaActual;
     respuestaTexto.value = '';
 }
 // katakana
-function InicioLetraka (){
+function InicioLetraka (simbolo){
     silabaActual = []
     respuestaCorrecta = []
     verificarAcierto()
-    const posicionAleatoria = Math.floor(Math.random()*katakana.length);
+    const posicionAleatoria = Math.floor(Math.random()*simbolo.length);
     respuestaCorrecta = hiraRoma[posicionAleatoria];
-    silabaActual = katakana[posicionAleatoria];
+    silabaActual = simbolo[posicionAleatoria];
     silabaRandom.innerHTML = silabaActual;
     respuestaTexto.value = '';
 }
@@ -51,6 +51,7 @@ function verificarRespuestakata(){
     btnEnviarDato.addEventListener ("click", () => {
         let textAreaDeRespuesta = document.querySelector('#respuesta').value;
         if (respuestaCorrecta == textAreaDeRespuesta.toLocaleLowerCase()) {
+            btnEnviarDato.addEventListener('click', () => {})
             contadorAciertos++;
             InicioLetraka();
         }else if (respuestaCorrecta != textAreaDeRespuesta.toLocaleLowerCase()){
@@ -63,28 +64,35 @@ function verificarRespuestakata(){
 
 
 // Verifica si el texto colocado es igual que el simbolo 
-function verificarRespuesta(){
-    InicioLetrahi ()
+function verificarRespuesta(simbolo){
+    InicioLetrahi (simbolo)
     btnEnviarDato.addEventListener ("click", () => {
         let textAreaDeRespuesta = document.querySelector('#respuesta').value;
         if (respuestaCorrecta == textAreaDeRespuesta.toLocaleLowerCase()) {
             contadorAciertos++
-            InicioLetrahi ();
-        }else{
-            InicioLetrahi ();
+            InicioLetrahi (simbolo);
+            contadortotal++
+
+        }else if (respuestaCorrecta != textAreaDeRespuesta.toLocaleLowerCase() && textAreaDeRespuesta.length > 0){
+            InicioLetrahi (simbolo);
+            contadortotal++
         }
-        contadortotal++
-        console.log(`${respuestaCorrecta} - contador: ${contadortotal} - contadorAciertos ${contadorAciertos} `);
+        // console.log(textAreaDeRespuesta)
+        // console.log(`${respuestaCorrecta} - contador: ${contadortotal} - contadorAciertos ${contadorAciertos} `);
     });
 }
 
 // Usando la tecla enter para apretar el boton cuando sea usado
 function enterbtn() {
     var key = event.keyCode;
+    let textAreaDeRespuesta = document.querySelector('#respuesta').value;
 
     if (key === 13) {
         event.preventDefault();
-        btnEnviarDato.click();
+        if(textAreaDeRespuesta.length > 0){
+
+            btnEnviarDato.click();
+        }
     }
 }
 
@@ -94,7 +102,9 @@ btnKatakana.addEventListener('click', () => {
     btnHiragana.classList.add('off');
     btnKatakana.classList.add('on');
     contadorCero();
-    InicioLetraka();
+    InicioLetrahi(katakana);
+    verificarRespuesta(katakana)
+
 });
 btnHiragana.addEventListener('click', () => {
     btnHiragana.classList.remove('off');
@@ -102,12 +112,13 @@ btnHiragana.addEventListener('click', () => {
     btnHiragana.classList.add('on');
     btnKatakana.classList.add('off');
     contadorCero()
-    InicioLetrahi()
-});
+    InicioLetrahi(hiragana)
+    verificarRespuesta(hiragana)
 
-InicioLetrahi()
-verificarRespuesta()
+});
+verificarRespuesta(hiragana)
+
 
 // verificarRespuesta(hiragana)
-console.log(btnHiragana)
-console.log(btnKatakana)
+// console.log(btnHiragana)
+// console.log(btnKatakana)   
