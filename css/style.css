@@ -20,10 +20,11 @@ button{
     padding: .7rem;
     margin: .5rem;
     border: none;
-    border-radius: 0 1.5rem 0 1.5rem;
+    border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
     font-size: 1.1rem;
     color: var(--font-color-primary);
     cursor: pointer;
+    border: .1rem solid var(--color-comp);
 
 }
 textarea{
@@ -61,14 +62,17 @@ textarea{
 .header__button{
     padding: .5rem;
 }
-
-#hira{
+/* Botones al ser seleccionados  */
+.on{
     background-color: var(--color-comp);
+    border-radius: 1.5rem 0 1.5rem 1.5rem;
+    transition: all 1.4s ease;
+
 }
-#kata{
+.off{
     background: var(--first-background);
-    border: .1rem solid var(--color-comp);
 }
+
 
 /*  MAIN / JUEGO */
 
