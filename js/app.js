@@ -9,7 +9,7 @@ const aciertos = document.querySelector('#aciertos');
 const cantidad = document.querySelector('#cantidad');
 
 
-let contadortotal = 1;
+let contadortotal = 0;
 let contadorAciertos = 0;
 
 
@@ -21,7 +21,7 @@ function verificarAcierto(){
 }
 function contadorCero(){
     // Resetea contadores segun el cambio de kata/hira
-    contadortotal = 1
+    contadortotal = 0
     contadorAciertos = 0
 }
 // Se crea  una constante para generar una aleatoridad en el array de silabas
@@ -46,37 +46,19 @@ function InicioLetraka (simbolo){
     silabaRandom.innerHTML = silabaActual;
     respuestaTexto.value = '';
 }
-function verificarRespuestakata(){
-    InicioLetraka ()
-    btnEnviarDato.addEventListener ("click", () => {
-        let textAreaDeRespuesta = document.querySelector('#respuesta').value;
-        if (respuestaCorrecta == textAreaDeRespuesta.toLocaleLowerCase()) {
-            btnEnviarDato.addEventListener('click', () => {})
-            contadorAciertos++;
-            InicioLetraka();
-        }else if (respuestaCorrecta != textAreaDeRespuesta.toLocaleLowerCase()){
-            InicioLetraka;
-        }
-        contadortotal++;
-        console.log(`${respuestaCorrecta} - contador: ${contadortotal} - contadorAciertos ${contadorAciertos} `);
-    });
-}
-
 
 // Verifica si el texto colocado es igual que el simbolo 
 function verificarRespuesta(simbolo){
-    InicioLetrahi (simbolo)
     btnEnviarDato.addEventListener ("click", () => {
         let textAreaDeRespuesta = document.querySelector('#respuesta').value;
         if (respuestaCorrecta == textAreaDeRespuesta.toLocaleLowerCase()) {
             contadorAciertos++
-            InicioLetrahi (simbolo);
             contadortotal++
 
         }else if (respuestaCorrecta != textAreaDeRespuesta.toLocaleLowerCase() && textAreaDeRespuesta.length > 0){
-            InicioLetrahi (simbolo);
             contadortotal++
         }
+        InicioLetrahi (simbolo);
         // console.log(textAreaDeRespuesta)
         console.log(`${respuestaCorrecta} - contador: ${contadortotal} - contadorAciertos ${contadorAciertos} `);
     });
@@ -106,7 +88,6 @@ btnKatakana.addEventListener('click', () => {
     verificarRespuesta(katakana)
 
 });
-
 btnHiragana.addEventListener('click', () => {
     btnHiragana.classList.remove('off');
     btnKatakana.classList.remove('on');
@@ -116,7 +97,6 @@ btnHiragana.addEventListener('click', () => {
     InicioLetrahi(hiragana)
     verificarRespuesta(hiragana)
 });
-
 
     
 // console.log(btnHiragana)
