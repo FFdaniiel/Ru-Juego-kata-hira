@@ -47,15 +47,16 @@ function InicioLetraka (){
     respuestaTexto.value = '';
 }
 function verificarRespuestakata(){
+    InicioLetraka ()
     btnEnviarDato.addEventListener ("click", () => {
         let textAreaDeRespuesta = document.querySelector('#respuesta').value;
         if (respuestaCorrecta == textAreaDeRespuesta.toLocaleLowerCase()) {
-            contadorAciertos++
+            contadorAciertos++;
+            InicioLetraka();
         }else if (respuestaCorrecta != textAreaDeRespuesta.toLocaleLowerCase()){
-            contadortotal++
+            InicioLetraka;
         }
-        InicioLetraka ()
-
+        contadortotal++;
         console.log(`${respuestaCorrecta} - contador: ${contadortotal} - contadorAciertos ${contadorAciertos} `);
     });
 }
@@ -68,9 +69,9 @@ function verificarRespuesta(){
         let textAreaDeRespuesta = document.querySelector('#respuesta').value;
         if (respuestaCorrecta == textAreaDeRespuesta.toLocaleLowerCase()) {
             contadorAciertos++
-            InicioLetrahi ()
+            InicioLetrahi ();
         }else{
-            InicioLetrahi ()
+            InicioLetrahi ();
         }
         contadortotal++
         console.log(`${respuestaCorrecta} - contador: ${contadortotal} - contadorAciertos ${contadorAciertos} `);
@@ -88,21 +89,22 @@ function enterbtn() {
 }
 
 btnKatakana.addEventListener('click', () => {
-    btnHiragana.classList.remove('on')
-    btnKatakana.classList.remove('off')
-    btnHiragana.classList.add('off')
-    btnKatakana.classList.add('on')
-    contadorCero()
+    btnHiragana.classList.remove('on');
+    btnKatakana.classList.remove('off');
+    btnHiragana.classList.add('off');
+    btnKatakana.classList.add('on');
+    contadorCero();
     InicioLetraka();
 });
 btnHiragana.addEventListener('click', () => {
-    btnHiragana.classList.remove('off')
-    btnKatakana.classList.remove('on')
-    btnHiragana.classList.add('on')
-    btnKatakana.classList.add('off')
+    btnHiragana.classList.remove('off');
+    btnKatakana.classList.remove('on');
+    btnHiragana.classList.add('on');
+    btnKatakana.classList.add('off');
     contadorCero()
     InicioLetrahi()
 });
+
 InicioLetrahi()
 verificarRespuesta()
 
