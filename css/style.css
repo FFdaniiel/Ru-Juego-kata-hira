@@ -3,8 +3,8 @@
     --tipo-jp: 'Noto Sans JP', sans-serif;
     --tipo-rubik: 'Rubik', sans-serif;
     /* Colores */
-    --first-background: #ECB390;
     --second-background: #EDCFA9;
+    --first-background: #ECB390;
     --font-color-primary: #FCF8E8;
     --color-comp: #DF7861;
 }
@@ -12,7 +12,7 @@
 body{
     height: 100%;
     margin: 1rem;
-    background-color: #EDCFA9;
+    background-color: var(--second-background);
     font-family: var(--tipo-rubik);
 }
 /* Extras */
