@@ -4,16 +4,11 @@
     --tipo-rubik: 'Rubik', sans-serif;
     /* Colores */
     --first-background: #ECB390;
-    --second-background: #D4E2D4;
+    --second-background: #EDCFA9;
     --font-color-primary: #FCF8E8;
     --color-comp: #DF7861;
 }
-html{
-    -webkit-user-select: none;
-    -moz-user-select: none;
-     -ms-user-select: none;
-    user-select: none;
-}
+
 body{
     margin: 1rem;
     background: var(--second-background);
