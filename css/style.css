@@ -8,6 +8,12 @@
     --font-color-primary: #FCF8E8;
     --color-comp: #DF7861;
 }
+html{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+     -ms-user-select: none;
+    user-select: none;
+}
 body{
     margin: 1rem;
     background: var(--second-background);
@@ -61,12 +67,12 @@ textarea{
 
 }
 .header__navGuia{
-    position: absolute;
-    right: 0rem;
+    position: fixed;
     top: -1rem;
-    border-radius: 100%;
+    right: 0rem;
+    border-radius: 25rem;
     background-color: var(--first-background);
-    padding: 3rem;
+    padding: 2rem;
     color: var(--font-color-primary);
     cursor: pointer;
     z-index: 2;
