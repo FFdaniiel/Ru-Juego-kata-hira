@@ -10,8 +10,9 @@
 }
 
 body{
+    height: 100%;
     margin: 1rem;
-    background-color: var(--second-background);
+    background-color: #EDCFA9;
     font-family: var(--tipo-rubik);
 }
 /* Extras */
