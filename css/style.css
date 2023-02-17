@@ -14,7 +14,18 @@ body{
     font-family: var(--tipo-rubik);
 }
 /* Extras */
+h2{
+    color: var(--color-comp);
+}
+th{
+    font-size: 1rem;
 
+}
+table,th,td{
+    padding: .1rem;
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
 button{
     display: block;
     padding: .7rem;
@@ -54,10 +65,20 @@ textarea{
     right: 0rem;
     top: -1rem;
     border-radius: 100%;
-    background-color: var(--second-background);
+    background-color: var(--first-background);
     padding: 3rem;
-    color: var(--color-comp);
+    color: var(--font-color-primary);
     cursor: pointer;
+    z-index: 2;
+
+}
+.guiaAbierta{
+    background: var(--second-background);
+    color: var(--color-comp);
+
+}
+.cerrar{
+    display: none;
 }
 .header__button{
     padding: .5rem;
@@ -90,9 +111,7 @@ textarea{
     color: var(--font-color-primary);
     font-family: var(--tipo-jp);
 }
-.extra{
-    color: var(--color-comp);
-}
+
 .main p{
     color: var(--font-color-primary);
     font-size: 1.6rem;
@@ -126,4 +145,31 @@ textarea{
 }
 .main__container textarea:focus::placeholder{
     color: var(--color-comp);
+}
+/* GUIA */
+
+.guia{
+    height: 100%;
+    width: 100%;
+    top: 0rem;
+    left: 23rem;
+    position: fixed;
+    background: var( --first-background);
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5ss ease-in-
+}
+.guia__container{
+    width: 90%;
+    height: 95%;
+    margin: 1rem;
+    background: var(--second-background);
+    position: absolute;
+}
+.guia__silabarios{
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    display: grid;
+    align-items: center;
+    text-align: center;
 }

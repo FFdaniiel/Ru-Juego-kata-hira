@@ -7,12 +7,16 @@ const btnKatakana = document.querySelector('#kara');
 // los contadores
 const aciertos = document.querySelector('#aciertos');
 const cantidad = document.querySelector('#cantidad');
+// GUIA
+const btnGuia = document.querySelector('#btnGuia');
+const contenidoGuia = document.querySelector('#contenido_guia');
+const btnguiaCerrar = document.querySelector('#btnGuiaCerrar');
 
 
 let contadortotal = 0;
 let contadorAciertos = 0;
 
-
+btnactivaHiragana();
 // Contadores
 function verificarAcierto(){
     // Añadir los valores del contador al html
@@ -59,8 +63,6 @@ function verificarRespuesta(simbolo){
             contadortotal++
         }
         InicioLetrahi (simbolo);
-        // console.log(textAreaDeRespuesta)
-        console.log(`${respuestaCorrecta} - contador: ${contadortotal} - contadorAciertos ${contadorAciertos} `);
     });
 }
 
@@ -77,7 +79,7 @@ function enterbtn() {
         }
     }
 }
-
+//  eventos para los botones
 btnKatakana.addEventListener('click', () => {
     btnHiragana.classList.remove('on');
     btnKatakana.classList.remove('off');
@@ -88,16 +90,31 @@ btnKatakana.addEventListener('click', () => {
     verificarRespuesta(katakana)
 
 });
-btnHiragana.addEventListener('click', () => {
-    btnHiragana.classList.remove('off');
-    btnKatakana.classList.remove('on');
-    btnHiragana.classList.add('on');
-    btnKatakana.classList.add('off');
-    contadorCero()
+function btnactivaHiragana(){
     InicioLetrahi(hiragana)
     verificarRespuesta(hiragana)
+    btnHiragana.addEventListener('click', () => {
+        btnHiragana.classList.remove('off');
+        btnKatakana.classList.remove('on');
+        btnHiragana.classList.add('on');
+        btnKatakana.classList.add('off');
+        contadorCero()
+        verificarRespuesta(hiragana)
+        InicioLetrahi(hiragana)
+
+    });
+};
+
+btnGuia.addEventListener('click', () =>{
+    btnGuia.classList.add('cerrar');
+    btnguiaCerrar.classList.remove('cerrar')
+    document.querySelector('.guia').style.left = 0;
 });
 
-    
-// console.log(btnHiragana)
-// console.log(btnKatakana)   
+btnguiaCerrar.addEventListener('click', () =>{
+    btnguiaCerrar.classList.add('cerrar');
+    btnGuia.classList.remove('cerrar')
+    document.querySelector('.guia').style.left = '23rem';
+});
+console.log(btnGuia)
+console.log(contenidoGuia)
