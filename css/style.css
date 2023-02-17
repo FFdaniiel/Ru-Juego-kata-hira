@@ -11,7 +11,7 @@
 
 body{
     margin: 1rem;
-    background: var(--second-background);
+    background-color: var(--second-background);
     font-family: var(--tipo-rubik);
 }
 /* Extras */
