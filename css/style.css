@@ -216,9 +216,9 @@ textarea{
     }
     /* contenido */
     .header__logo {
-        top: 0;
-        left: 0;
-        font-size: 36rem;
+        top: -4.4rem;
+        left: -3rem;
+        font-size: 42rem;
         font-weight: 0;
         position: absolute;
     }
