@@ -225,6 +225,7 @@ textarea{
         font-size: 42rem;
         font-weight: 0;
         position: absolute;
+        color: var(--color-comp);
     }
     .header__navGuia {
         padding: 2.3rem;
