@@ -8,7 +8,8 @@ const btnKatakana = document.querySelector('#kara');
 const aciertos = document.querySelector('#aciertos');
 const cantidad = document.querySelector('#cantidad');
 // GUIA
-const btnGuia = document.querySelector('#btnGuia');
+const btnGuia = document.querySelector('.header__navGuia');
+const btnGuiaDesktop = document.querySelector('.guiaDesktop');
 const contenidoGuia = document.querySelector('#contenido_guia');
 const btnguiaCerrar = document.querySelector('#btnGuiaCerrar');
 
@@ -85,6 +86,7 @@ btnKatakana.addEventListener('click', () => {
     btnKatakana.classList.remove('off');
     btnHiragana.classList.add('off');
     btnKatakana.classList.add('on');
+    document.querySelector('#logo').innerHTML = 'ル';
     contadorCero();
     InicioLetrahi(katakana);
     verificarRespuesta(katakana)
@@ -98,23 +100,28 @@ function btnactivaHiragana(){
         btnKatakana.classList.remove('on');
         btnHiragana.classList.add('on');
         btnKatakana.classList.add('off');
+        document.querySelector('#logo').innerHTML = 'る';
         contadorCero()
         verificarRespuesta(hiragana)
         InicioLetrahi(hiragana)
 
     });
 };
-
+//  GUIA
 btnGuia.addEventListener('click', () =>{
     btnGuia.classList.add('cerrar');
     btnguiaCerrar.classList.remove('cerrar')
-    document.querySelector('.guia').style.left = 0;
+    document.querySelector('.guiaMobile').style.left = 0;
+    document.querySelector('.guiaDesktop').style.left = '70%';
+    document.querySelector('.guiaDesktop').style.left = '70%';
 });
 
 btnguiaCerrar.addEventListener('click', () =>{
     btnguiaCerrar.classList.add('cerrar');
     btnGuia.classList.remove('cerrar')
-    document.querySelector('.guia').style.left = '23rem';
+    document.querySelector('.guiaMobile').style.left = '100%';
+    document.querySelector('.guiaDesktop').style.left = '100%';
+
 });
-console.log(btnGuia)
-console.log(contenidoGuia)
+
+
