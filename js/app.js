@@ -35,7 +35,7 @@ function InicioLetrahi (simbolo){
     respuestaCorrecta = []
     verificarAcierto()
     const posicionAleatoria = Math.floor(Math.random()*simbolo.length);
-    respuestaCorrecta = hiraRoma[posicionAleatoria];
+    respuestaCorrecta = romaji[posicionAleatoria];
     silabaActual = simbolo[posicionAleatoria];
     silabaRandom.innerHTML = silabaActual;
     respuestaTexto.value = '';
@@ -46,7 +46,7 @@ function InicioLetraka (simbolo){
     respuestaCorrecta = []
     verificarAcierto()
     const posicionAleatoria = Math.floor(Math.random()*simbolo.length);
-    respuestaCorrecta = hiraRoma[posicionAleatoria];
+    respuestaCorrecta = romaji[posicionAleatoria];
     silabaActual = simbolo[posicionAleatoria];
     silabaRandom.innerHTML = silabaActual;
     respuestaTexto.value = '';
@@ -82,46 +82,60 @@ function enterbtn() {
 }
 //  eventos para los botones
 btnKatakana.addEventListener('click', () => {
-    btnHiragana.classList.remove('on');
-    btnKatakana.classList.remove('off');
-    btnHiragana.classList.add('off');
-    btnKatakana.classList.add('on');
-    document.querySelector('#logo').innerHTML = 'ル';
+    modificacionesKatakana()
     contadorCero();
     InicioLetrahi(katakana);
     verificarRespuesta(katakana)
 
 });
+
 function btnactivaHiragana(){
     InicioLetrahi(hiragana)
     verificarRespuesta(hiragana)
     btnHiragana.addEventListener('click', () => {
-        btnHiragana.classList.remove('off');
-        btnKatakana.classList.remove('on');
-        btnHiragana.classList.add('on');
-        btnKatakana.classList.add('off');
-        document.querySelector('#logo').innerHTML = 'る';
+        modificacionesHiragana()
         contadorCero()
-        verificarRespuesta(hiragana)
         InicioLetrahi(hiragana)
-
+        verificarRespuesta(hiragana)
     });
 };
+// Ediando clases y html
+function modificacionesKatakana(){
+    btnHiragana.classList.remove('on');
+    btnKatakana.classList.remove('off');
+    btnHiragana.classList.add('off');
+    btnKatakana.classList.add('on');
+    document.querySelector('#logo').innerHTML = 'ル';
+}
+function modificacionesHiragana(){
+    btnHiragana.classList.remove('off');
+    btnKatakana.classList.remove('on');
+    btnHiragana.classList.add('on');
+    btnKatakana.classList.add('off');
+    document.querySelector('#logo').innerHTML = 'る';
+}
 //  GUIA
 btnGuia.addEventListener('click', () =>{
     btnGuia.classList.add('cerrar');
     btnguiaCerrar.classList.remove('cerrar')
-    document.querySelector('.guiaMobile').style.left = 0;
-    document.querySelector('.guiaDesktop').style.left = '70%';
-    document.querySelector('.guiaDesktop').style.left = '70%';
+    modificacionesGuiasClick()
+
 });
 
 btnguiaCerrar.addEventListener('click', () =>{
     btnguiaCerrar.classList.add('cerrar');
     btnGuia.classList.remove('cerrar')
-    document.querySelector('.guiaMobile').style.left = '100%';
-    document.querySelector('.guiaDesktop').style.left = '100%';
-
+    modificacionesGuiasCerrar()
 });
 
+// Editando css
+function modificacionesGuiasCerrar(){
+    document.querySelector('.guiaMobile').style.left = '100%';
+    document.querySelector('.guiaDesktop').style.left = '100%';
+}
+function modificacionesGuiasClick(){
+    document.querySelector('.guiaMobile').style.left = 0;
+    document.querySelector('.guiaDesktop').style.left = '70%';
+    document.querySelector('.guiaDesktop').style.left = '70%';
+}
 

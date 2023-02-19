@@ -39,13 +39,19 @@ button{
     border: .1rem solid var(--color-comp);
 
 }
+button:hover{
+    color: var(--color-comp);
+
+}
 textarea{
     border: none;
     resize: none;
     box-shadow: none;
     outline: none;;
 }
-
+#logoka{
+    display: none;
+}
 /* Contenido principal - fondo/logo - header - nav*/
 .container{
     background-color: var(--first-background);
@@ -78,13 +84,22 @@ textarea{
     border: 2px solid var(--second-background);
 
 }
+.header__navGuia:hover{
+    background: var(--second-background);
+    color: var(--color-comp);
 
+}
 .guiaAbierta{
     position: absolute;
     z-index: 1;
     border: 2px solid var(--first-background);
     background: var(--second-background);
     color: var(--color-comp);
+
+}
+.guiaAbierta:hover{
+    color: var(--font-color-primary);
+    background-color: var(--first-background);
 
 }
 .cerrar{
