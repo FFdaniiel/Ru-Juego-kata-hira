@@ -86,6 +86,7 @@ btnKatakana.addEventListener('click', () => {
     contadorCero();
     InicioLetrahi(katakana);
     verificarRespuesta(katakana)
+    respuestaTexto.focus();
 
 });
 
@@ -97,6 +98,7 @@ function btnactivaHiragana(){
         contadorCero()
         InicioLetrahi(hiragana)
         verificarRespuesta(hiragana)
+        respuestaTexto.focus();
     });
 };
 // Ediando clases y html
@@ -139,3 +141,4 @@ function modificacionesGuiasClick(){
     document.querySelector('.guiaDesktop').style.left = '70%';
 }
 
+// focus al texto

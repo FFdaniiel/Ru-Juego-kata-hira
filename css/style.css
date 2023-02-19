@@ -39,10 +39,6 @@ button{
     border: .1rem solid var(--color-comp);
 
 }
-button:hover{
-    color: var(--color-comp);
-
-}
 textarea{
     border: none;
     resize: none;
@@ -213,6 +209,9 @@ textarea{
 
 /* DESKTOP  */
 @media (min-width: 1024px) {
+    button:hover{
+        color: var(--color-comp);
+    }
     /* menu desplegable */
     .guiaMobile{
         display: none;
