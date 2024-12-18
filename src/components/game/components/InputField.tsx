@@ -1,4 +1,3 @@
-// src/components/game/GameContainer/components/InputField.tsx
 import { FC, useState, useRef } from 'react';
 import { Button } from '../../shared/ui/Btn/Btn';
 

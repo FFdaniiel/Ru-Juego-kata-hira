@@ -1,4 +1,3 @@
-// src/components/Guia/SyllabaryTable.tsx
 import { FC } from 'react'
 import { useGame } from '../../context/GameContext'
 import {

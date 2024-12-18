@@ -1,4 +1,3 @@
-// src/layout/Background/Background.tsx
 import { useCallback, useEffect, useState } from 'react';
 import { useGame  } from '../../../context/GameContext';
 import { HIRAGANA, KATAKANA } from '../../../constants/syllabaries';

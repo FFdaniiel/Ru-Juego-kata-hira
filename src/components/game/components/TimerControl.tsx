@@ -1,4 +1,3 @@
-// src/components/game/GameContainer/components/TimerControl.tsx
 import { FC, useState, useEffect } from 'react';
 import { Button } from '../../shared/ui/Btn/Btn';
 // Importamos los íconos necesarios

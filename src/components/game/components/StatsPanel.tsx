@@ -1,4 +1,3 @@
-// src/components/game/GameContainer/components/StatsPanel.tsx
 import { FC } from 'react'
 import { useGame } from '../../../context/GameContext'
 import { achievements } from '../../../utils/achievements'

@@ -1,4 +1,3 @@
-// src/components/game/GameContainer/index.tsx
 import { FC, useEffect } from 'react';
 import { useGame } from '../../context/GameContext';
 import { ScoreDisplay } from './components/ScoreDisplay';
