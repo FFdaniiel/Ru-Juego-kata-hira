@@ -1,0 +1,19 @@
+.Toastify__toast {
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+}
+
+.Toastify__toast--success {
+  background: rgba(72, 187, 120, 0.9);
+  color: white;
+}
+
+.Toastify__toast--error {
+  background: rgba(245, 101, 101, 0.9);
+  color: white;
+}
+
+.Toastify__progress-bar {
+  background: rgba(255, 255, 255, 0.7);
+}

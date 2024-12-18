@@ -1,18 +1,35 @@
-﻿# Ru-Juego-kata-hira
-(No terminado) - (Probablemente al terminar se vuelva a ver el diseño)
+# Ru Learning Game
 
-Practica de conceptos e intentar hacer un proyecto propio.
-La idea es lograr un juego de responder cual es la palabra tanto en katakana como hiragana
+Un juego interactivo para aprender los silabarios japoneses Hiragana y Katakana, diseñado con un enfoque en el aprendizaje progresivo y la gamificación.
 
-idea celular
+## Características
 
-![image](https://user-images.githubusercontent.com/109768043/219104440-c1f1a555-bd2f-4259-b217-04b5a4f4ec1c.png)
+### Sistema de Aprendizaje
+- 🎯 Práctica de Hiragana y Katakana
+- 📈 Progresión gradual de dificultad
+- 🔄 Retroalimentación instantánea
+- ✨ Sistema de rachas para mantener la motivación
 
-idea Desktop
+### Niveles de Dificultad
+- **Básico**: Caracteres fundamentales
+- **Intermedio**: Incluye dakuten (゛)
+- **Avanzado**: Añade handakuten (゜)
+- **Maestro**: Incluye todas las combinaciones (yōon)
 
-![image](https://user-images.githubusercontent.com/109768043/219105103-1fa02850-7cf8-4fde-b7b0-939f643a04ef.png)
-![image](https://user-images.githubusercontent.com/109768043/219104767-7e4c3f29-1b77-44bb-a454-956ba2c2d940.png)
+### Sistema de Gamificación
+- 🏆 Logros desbloqueables
+- ⭐ Sistema de experiencia y niveles
+- 🔥 Rachas de respuestas correctas
+- 📊 Seguimiento de estadísticas
 
-Colores
+### Modos de Juego
+- ⏱️ Contrarreloj (1, 3, 5 minutos)
+- 🎮 Práctica libre
+- 🎯 Modo desafío (próximamente)
 
-![image](https://user-images.githubusercontent.com/109768043/219104885-4ce0b062-d6fe-44b3-bab1-5ff2e2f11742.png)
+## Tecnologías Utilizadas
+
+- React + TypeScript
+- Tailwind CSS
+- React Toastify
+- Lucide Icons

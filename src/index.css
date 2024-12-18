@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-secondary font-rubik m-4;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply block px-3 py-2.5 m-2 rounded-3xl text-lg text-text cursor-pointer border border-accent;
+  }
+
+  .btn-active {
+    @apply bg-accent rounded-[1.5rem_0_1.5rem_1.5rem] transition-all duration-[1.4s] ease-in-out;
+  }
+
+  .btn-inactive {
+    @apply bg-primary;
+  }
+}
