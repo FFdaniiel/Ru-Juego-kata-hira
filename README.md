@@ -1,5 +1,5 @@
 ﻿# Ru-Juego-kata-hira
-##(No terminado) - (Se modifico en la nueva rama)
+## (No terminado) - (Se modifico en la nueva rama)
 
 Practica de conceptos e intentar hacer un proyecto propio.
 La idea es lograr un juego de responder cual es la palabra tanto en katakana como hiragana
