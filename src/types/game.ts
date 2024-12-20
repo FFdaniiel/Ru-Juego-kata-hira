@@ -30,6 +30,7 @@ export interface GameState {
 export interface GameContextType {
   state: GameState;
   setSyllabary: (syllabary: SyllabaryType) => void;
+  setDifficulty: (difficulty: DifficultyLevel) => void;
   startGame: (mode: GameMode, difficulty: DifficultyLevel) => void;
   endGame: () => void;
   pauseGame: () => void;
