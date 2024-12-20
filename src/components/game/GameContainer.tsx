@@ -16,7 +16,6 @@ export const GameContainer: FC = () => {
 
   // Manejador para el fin del tiempo
   const handleTimeEnd = () => {
-    alert(`¡Tiempo terminado!\nAciertos: ${state.score.correct}\nTotal: ${state.score.total}`);
     resetScore();
   };
 

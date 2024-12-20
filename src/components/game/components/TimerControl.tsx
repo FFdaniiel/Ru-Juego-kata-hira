@@ -2,6 +2,7 @@ import { FC, useState, useEffect } from 'react';
 import { Button } from '../../shared/ui/Btn/Btn';
 // Importamos los íconos necesarios
 import { FiClock, FiPause, FiPlay, FiX } from 'react-icons/fi';
+import { ResultsModal } from './ResultsModal';
 
 interface TimerControlProps {
   onTimeEnd: () => void;
@@ -10,8 +11,9 @@ interface TimerControlProps {
 export const TimerControl: FC<TimerControlProps> = ({ onTimeEnd }) => {
   // Estados para manejar el temporizador
   const [timeLeft, setTimeLeft] = useState<number | null>(null);
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(false)
   const [selectedTime, setSelectedTime] = useState<number | null>(null);
+  const [showResults, setShowResults] = useState(false);
 
   // Función para formatear el tiempo en mm:ss
   const formatTime = (seconds: number) => {
@@ -29,7 +31,7 @@ export const TimerControl: FC<TimerControlProps> = ({ onTimeEnd }) => {
         setTimeLeft(time => {
           if (time === null || time <= 1) {
             setIsActive(false);
-            onTimeEnd();
+            setShowResults(true);
             return null;
           }
           return time - 1;
@@ -46,6 +48,11 @@ export const TimerControl: FC<TimerControlProps> = ({ onTimeEnd }) => {
     setIsActive(true);
   };
 
+  const resetAndStartTimer = (minutes: number) => {
+    setTimeLeft(minutes * 60);
+    setSelectedTime(minutes);
+    setIsActive(true);
+  };
   const toggleTimer = () => {
     if (timeLeft === null && selectedTime) {
       startTimer(selectedTime);
@@ -120,6 +127,16 @@ export const TimerControl: FC<TimerControlProps> = ({ onTimeEnd }) => {
           </Button>
         </>
       )}
+      {/* Modal de resultados */}
+      <ResultsModal
+        isOpen={showResults}
+        onClose={() => {
+          setShowResults(false);
+          onTimeEnd();
+        }}
+        onRestart={resetAndStartTimer}
+        lastSelectedTime={selectedTime || 1} 
+      />
     </div>
   );
 };
